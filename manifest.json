@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Remote Desktop Custom Background Color",
+  "version": "1.0",
+  "description": "Change the color of the borders/background around a remote desktop window. ",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://remotedesktop.google.com/access/session/*"],
+      "js": ["dist/content.js"]
+    }
+  ]
+}
